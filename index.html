@@ -1,17 +1,57 @@
-<form id="padrinoForm">
-  <label for="padrino">Elige tu rol:</label>
-  <select name="padrino" id="padrino">
-    <option value="padrino_boda">Padrino de Boda</option>
-    <option value="madrina_boda">Madrina de Boda</option>
-    <option value="padrino_anillo">Padrino de Anillo</option>
-  </select>
-  <br><br>
-  <label for="nombre">Tu Nombre:</label>
-  <input type="text" id="nombre" name="nombre" required>
-  <br><br>
-  <label for="email">Correo Electrónico:</label>
-  <input type="email" id="email" name="email" required>
-  <br><br>
-  <button type="submit">Enviar</button>
-</form>
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Boda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>¡Estás invitado a nuestra boda!</h1>
+    <p>Nos encantaría que compartas este momento especial con nosotros.</p>
+  </header>
+
+  <section class="details">
+    <div class="couple">
+      <h2>Los Novios:</h2>
+      <p><strong>Ana & Juan</strong></p>
+    </div>
+
+    <div class="date-location">
+      <h2>Fecha y Lugar:</h2>
+      <p><strong>Fecha:</strong> 25 de febrero de 2025</p>
+      <p><strong>Hora:</strong> 6:00 PM</p>
+      <p><strong>Lugar:</strong> Iglesia San Juan, Calle Principal #123</p>
+    </div>
+
+    <div class="message">
+      <h2>Mensaje:</h2>
+      <p>Nos llena de alegría compartir con ustedes este día tan especial. ¡Esperamos contar con su presencia en nuestra boda!</p>
+    </div>
+  </section>
+
+  <section class="rsvp">
+    <h2>Confirmar Asistencia</h2>
+    <p>Por favor confirma tu asistencia antes del 10 de febrero de 2025.</p>
+    <form id="rsvp-form">
+      <label for="name">Tu Nombre:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="attending">Asistirás:</label>
+      <select id="attending" name="attending">
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+      </select>
+
+      <button type="submit">Enviar Confirmación</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>¡Esperamos verlos pronto!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
