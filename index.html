@@ -1,63 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación de Boda</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
 </head>
 <body>
-  <header class="header">
-    <h1>¡Proximamente Nuestra Boda!</h1>
-    <p>Nos encantaría que fueras parte de este momento especial con nosotros.</p>
-  </header>
-
-  <section class="details">
-    <div class="couple">
-      <h2>Los Novios:</h2>
-      <p><strong>Patricia y Ernesto</strong></p>
-    </div>
-    
-    <div class="message">
-      <h2>Mensaje:</h2>
-      <p>Nos llena de alegría compartir con ustedes este día tan especial. ¡Esperamos contar con su presencia en nuestra boda!</p>
-      <p>No menores por seguridad</p>
-    </div>
-  </section>
-
-  <section class="rsvp">
-    <h2>¿Te gustaria ser nuestro Padrino/Madrina de bodas?</h2>
-    <p>Por favor confirmar antes del 10 de febrero de 2025.</p>
-
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd0fKdEW_K3xOFab3_jGnZcFryKWhD04f2JazPxenPWTzs2CA/viewform?embedded=true" width="640" height="990" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-    
-    <form id="rsvp-form">
-      <label for="name">Tu Nombre:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="attending">Opciones:</label>
-      <select id="attending" name="attending">
-        <option value=""></option>
-        <option value="">Fotografia</option>
-        <option value="">Anillos</option>
-        <option value="">Arras</option>
-        <option value="">Lazo</option>
-        <option value="">Regalo Sopresa</option>
-        <option value="">Musica</option>
-        <option value="">Botellas</option>
-        <option value="">Velacion</option>
-        <option value="">Ramo</option>
-        <option value="">Coperacion al Salon</option>
-        <option value="">Vestido</option>
-        <option value="">Traje</option>
-      </select>
-
-      <button type="submit">Enviar</button>
+    <h2>Formulario de Contacto</h2>
+    <form id="contact-form">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        
+        <button type="submit">Enviar</button>
     </form>
-  </section>
 
-  <footer class="footer">
-    <p>¡Muchas Gracias, esperamos verlos pronto!</p>
-  </footer>
+    <script>
+        // Enviar el formulario usando JavaScript
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir que el formulario se envíe de la manera tradicional
+
+            const formData = new FormData(event.target);
+
+            fetch('https://script.google.com/macros/s/AKfycbzXXXXXXXXXXXXXX/exec', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Formulario enviado con éxito');
+            })
+            .catch(error => {
+                alert('Hubo un error al enviar el formulario');
+            });
+        });
+    </script>
+</body>
+</html>
 
   <script src="script.js"></script>
 </body>
