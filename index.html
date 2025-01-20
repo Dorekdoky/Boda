@@ -15,7 +15,7 @@
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email" required><br><br>
         
-        <label for="message">Mensaje:</label><br>
+        <label for="message">Mensajes:</label><br>
         <textarea id="message" name="message" required></textarea><br><br>
         
         <button type="submit">Enviar</button>
@@ -36,7 +36,7 @@
             });
 
             // Realiza la solicitud a la Google Apps Script
-            axios.post(https://script.google.com/macros/s/AKfycbyOthKTxaFD8Pi4urI8HiPKsGEpfzGQl0GAEGMAhJOvcCPvA70KRfRe1Dp_toUF_Isq9w/exec, formObject)
+            axios.post('https://script.google.com/macros/s/AKfycbySj_JXDvTNlk5DyxnLa6X0vZ3bTxqwQ6268A38kBgHXMEd5b12W0t20WzfQsv8wgv0xw/exec', formObject)
                 .then(response => {
                     alert('Formulario enviado correctamente');
                 })
