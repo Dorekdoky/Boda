@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto</title>
+    <title>Formulario de contacto</title>
 </head>
 <body>
-    <h2>Formulario de Contacto</h2>
-    <form id="contact-form">
-        <label for="name">Nombre:</label><br>
+    <h1>Formulario de contacto</h1>
+
+    <form id="contactForm">
+        <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" required><br><br>
         
-        <label for="email">Correo Electrónico:</label><br>
+        <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email" required><br><br>
         
         <label for="message">Mensaje:</label><br>
@@ -20,29 +21,29 @@
         <button type="submit">Enviar</button>
     </form>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"></script>
+
     <script>
-        // Enviar el formulario usando JavaScript
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevenir que el formulario se envíe de la manera tradicional
-
+        // Función para manejar el envío del formulario
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            // Obtiene los valores del formulario
             const formData = new FormData(event.target);
-
-            fetch(https://script.google.com/macros/s/AKfycbxl9GRfgPnemz7kbNrytZBKCDRSsOMgpobtMHx-WM1UeouyXwViKgKiu4AJElGw4P2iwA/exec, {
-                method: 'POST',
-                body: formData,
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Formulario enviado con éxito');
-            })
-            .catch(error => {
-                alert('Hubo un error al enviar el formulario');
+            const formObject = {};
+            formData.forEach((value, key) => {
+                formObject[key] = value;
             });
+
+            // Realiza la solicitud a la Google Apps Script
+            axios.post('https://script.google.com/macros/s/YOUR_SCRIPT_URL/exec', formObject)
+                .then(response => {
+                    alert('Formulario enviado correctamente');
+                })
+                .catch(error => {
+                    alert('Hubo un problema al enviar el formulario');
+                });
         });
     </script>
-</body>
-</html>
-
-  <script src="script.js"></script>
 </body>
 </html>
