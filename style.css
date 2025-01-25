@@ -1,5 +1,3 @@
-p {
-  background-image: url('Imagenes/bda.jpg');
+  background-image: url('imagen.jpg');
   background-repeat: no-repeat;
-  background-size: 60px 40px;
-}
+  background-attachment: fixed;
