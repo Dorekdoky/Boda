@@ -33,8 +33,8 @@
             <input
               class="form-control"
               type="text"
-              name="Nombre"
-              id="Nombre"
+              name="nombre"
+              id="nombre"
               placeholder="Nombre"
               required
             />
@@ -46,7 +46,7 @@
               type="text"
               name="Numero_Contacto"
               id="Numero_Contacto"
-              placeholder="Numero_Contacto"
+              placeholder="Numero de Contacto"
               required
             />
           </div>
@@ -71,7 +71,7 @@
               class="form-control"
               name="Mensaje_novios"
               id="Mensaje_novios"
-              placeholder="Mensaje_novios"
+              placeholder="Mensaje para los novios"
               required
             ></textarea>
           <div class="form-group form-check">
@@ -96,12 +96,6 @@
         var formData = new FormData(form);
         var ex = document.getElementById("ex").checked;
         var age = document.getElementById("age").checked;
-
-        if (age) {
-          formData.append("age", "Yes");
-        } else {
-          formData.append("age", "No");
-        }
         if (ex) {
           formData.append("ex", "Yes");
         } else {
