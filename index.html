@@ -26,73 +26,61 @@
   <body class="bg-light">
     <div class="container">
       <div class="form-container">
-        <h4 class="text-center mb-4">Form Submission to Google Sheet</h4>
+        <h4 class="text-center mb-4">¡¡Proximamente nuestra boda!!</h4>
         <form id="submit-to-google-sheet">
           <div class="form-group">
-            <label for="name">Names:</label>
+            <label for="Nombre">Nombre:</label>
             <input
               class="form-control"
               type="text"
-              name="name"
-              id="name"
-              placeholder="Name"
+              name="Nombre"
+              id="Nombre"
+              placeholder="Nombre"
               required
             />
           </div>
           <div class="form-group">
-            <label for="email">Email:</label>
-            <input
-              class="form-control"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="slip">Contact Number:</label>
+            <label for="slip">Numero de Contacto:</label>
             <input
               class="form-control"
               type="text"
-              name="contact_number"
-              id="contact_number"
-              placeholder="Contact Number"
+              name="Numero_Contacto"
+              id="Numero_Contacto"
+              placeholder="Numero_Contacto"
               required
             />
           </div>
-
           <div class="form-group">
-            <label for="loc">Gender:</label>
-            <select class="form-control" name="gender" id="gender" required>
+            <label for="loc">¿Deseas ser padrino/madrina de bodas?:</label>
+            <select class="form-control" name="Padrinos" id="Padrinos" required>
               <option value="" disabled selected hidden>Choose...</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+              <option value="Salon">Apoyo al Salon</option>
+              <option value="Vestido">Vestido</option>
+              <option value="Traje">Traje</option>
+              <option value="Grupo">Grupo</option>
+              <option value="Botellas">Botellas</option>
+              <option value="Fuegos_artificiales">Fuegos Artificiales</option>
+              <option value="Vehiculo">Vehiculo</option>
+              <option value="Regalo_sorpresa">Regalo Sorpresa</option>
+              <option value="Iglesia"></option>
             </select>
           </div>
           <div class="form-group">
-            <label for="loc">Message:</label>
+            <label for="loc">Mensaje para los novios:</label>
             <textarea
               class="form-control"
-              name="message"
-              id="message"
-              placeholder="Message"
+              name="Mensaje_novios"
+              id="Mensaje_novios"
+              placeholder="Mensaje_novios"
               required
             ></textarea>
-          <div class="form-group form-check mt-2">
-            <input class="form-check-input" type="checkbox" id="age" />
-            <label class="form-check-label" for="age"
-              >Check if you are over 18 years old</label
-            >
-          </div>
           <div class="form-group form-check">
             <input class="form-check-input" type="checkbox" id="ex" required />
-            <label class="form-check-label" for="ex"
-              >By checking this box I certify that I am agree with the data
-              terms and policies.
+            <label class="form-check-label" for="ex">
+              ¿Aceptas ponerte hasta el tronco junto con nosotros?
             </label>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">
+          <button type="Enviar" class="btn btn-primary btn-block">
             Submit
           </button>
         </form>
