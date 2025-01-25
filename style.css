@@ -1,5 +1,5 @@
 p {
-  background-image: url(https://github.com/Dorekdoky/Boda/blob/main/bda.jpg);
+  background-image: url("https://github.com/Dorekdoky/Boda/blob/main/bda.jpg");
   background-repeat: no-repeat;
   background-size: 60px 40px;
 }
