@@ -1,3 +1,5 @@
-html {
-  background-color: #00539f;
+p {
+  background-image: url('imagenes/bda.jpg');
+  background-repeat: no-repeat;
+  background-size: 60px 40px;
 }
