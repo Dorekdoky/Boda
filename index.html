@@ -27,6 +27,7 @@
     <div class="container">
       <div class="form-container">
         <h4 class="text-center mb-4">¡¡Proximamente nuestra boda!!</h4>
+        <h4 class="text-center mb-4">Patricia y Ernesto</h4>
         <form id="submit-to-google-sheet">
           <div class="form-group">
             <label for="Nombre">Nombre:</label>
@@ -75,7 +76,7 @@
               required
             ></textarea>
           <div class="form-group form-check">
-            <input class="form-check-input" type="checkbox" id="ex" required />
+            <input class="form-check-input" type="checkbox" id="Acepta_ponerse_hasta_el_tronco" required />
             <label class="form-check-label" for="ex">
               ¿Aceptas ponerte hasta el tronco junto con nosotros?
             </label>
@@ -94,11 +95,11 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         var formData = new FormData(form);
-        var ex = document.getElementById("ex").checked;
-        if (ex) {
-          formData.append("ex", "Yes");
+        var ex = document.getElementById("Acepta_ponerse_hasta_el_tronco").checked;
+        if (Acepta_ponerse_hasta_el_tronco) {
+          formData.append("Acepta_ponerse_hasta_el_tronco", "Yes");
         } else {
-          formData.append("ex", "No");
+          formData.append("Acepta_ponerse_hasta_el_tronco", "No");
         }
 
         fetch(scriptURL, { method: "POST", body: formData })
