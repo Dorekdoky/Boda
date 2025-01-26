@@ -61,8 +61,7 @@ button:hover {
 }
 
 /* Estilos para la tabla de selección múltiple */
-select[multiple] {
-  height: 120px;  /* Un poco más grande para que el usuario pueda ver varias opciones */
+select {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
