@@ -1,5 +1,5 @@
 body {
-  background-image: url('Boda/Imagenes/bda.jpg');
+  background-image: url('/Boda/Imagenes/bda.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Para que el fondo se quede fijo al hacer scroll */
