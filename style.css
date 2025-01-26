@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
   margin: 0;
   padding: 0;
@@ -16,19 +17,23 @@ body {
 h1 {
   text-align: center;
   margin-top: 20px;
+  font-size: 32px;
 }
 
+/* Formulario */
 form {
   background-color: rgba(0, 0, 0, 0.6);  /* Fondo oscuro semitransparente */
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  align-items: center;
+  width: 400px;
+  align-items: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-input[type="text"] {
+/* Campo de texto */
+input[type="text"], input[type="tel"], textarea, select {
   padding: 10px;
   margin: 10px 0;
   width: 100%;
@@ -36,36 +41,34 @@ input[type="text"] {
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
+  font-size: 16px;
 }
 
+/* Estilo del botón */
 button {
   padding: 10px 20px;
   border: none;
-  background-color: #4CAF50;  /* Verde */
+  background-color: #4CAF50;
   color: white;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
   background-color: #45a049;
 }
 
-@media (min-width: 1024px) {
-  body {
-    background-attachment: fixed;
-  }
+/* Estilos para la tabla de selección múltiple */
+select[multiple] {
+  height: 120px;  /* Un poco más grande para que el usuario pueda ver varias opciones */
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
-}
-
+/* Media queries para dispositivos pequeños */
 @media (max-width: 767px) {
-  body {
-    background-attachment: scroll;
+  form {
+    width: 90%;  /* Hacer el formulario más pequeño en pantallas pequeñas */
   }
 }
