@@ -53,7 +53,7 @@ input[type="text"]:focus, input[type="tel"]:focus, textarea:focus, select:focus 
 
 /* Estilo específico para el campo select */
 select {
-  color: black; /* Letras grises */
+  color: gray; /* Letras grises */
 }
 
 /* Estilo del botón */
