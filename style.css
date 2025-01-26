@@ -19,11 +19,6 @@ h1 {
   margin-top: 20px;
   font-size: 32px;
 }
-p {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 18px;
-}
 
 /* Formulario */
 form {
@@ -37,16 +32,23 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Campo de texto */
+/* Campo de texto, número de teléfono, textarea, y select */
 input[type="text"], input[type="tel"], textarea, select {
   padding: 10px;
   margin: 10px 0;
   width: 100%;
   border: 2px solid #fff;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fffcfc;
+  background-color: rgba(255, 255, 255, 0.3); /* Fondo ligeramente transparente */
+  color: white;  /* Color de texto blanco */
   font-size: 16px;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo cuando el input o textarea está enfocado */
+input[type="text"]:focus, input[type="tel"]:focus, textarea:focus, select:focus {
+  background-color: rgba(255, 255, 255, 0.5); /* Fondo más opaco al hacer foco */
+  outline: none; /* Elimina el borde por defecto del navegador */
 }
 
 /* Estilo del botón */
@@ -63,11 +65,6 @@ button {
 
 button:hover {
   background-color: #45a049;
-}
-
-/* Estilos para la tabla de selección múltiple */
-select {
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Media queries para dispositivos pequeños */
