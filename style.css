@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   height: 100vh;
-  background-image: url('Imagenes/bda3.jpg');
+  background-image: url('images/fondo.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -49,6 +49,11 @@ input[type="text"], input[type="tel"], textarea, select {
 input[type="text"]:focus, input[type="tel"]:focus, textarea:focus, select:focus {
   background-color: rgba(255, 255, 255, 0.5); /* Fondo más opaco al hacer foco */
   outline: none; /* Elimina el borde por defecto del navegador */
+}
+
+/* Estilo específico para el campo select */
+select {
+  color: gray; /* Letras grises */
 }
 
 /* Estilo del botón */
