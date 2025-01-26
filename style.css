@@ -3,24 +3,43 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  color: white;
-  height: 100vh;
-  background-image: url('Imagenes/bda3.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  color: black;
+  background-color: #f8f9fa;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
-  margin-top: 20px;
   font-size: 32px;
+  margin-top: 20px;
 }
 
-/* Formulario */
+/* Estilo para los cuadros de texto (uno al lado del otro) */
+.text-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los cuadros */
+  margin: 20px 0;
+}
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+  color: white;
+  padding: 20px;
+  width: 45%; /* Ancho de cada cuadro */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.text-box h2 {
+  margin-top: 0;
+}
+
+.text-box p {
+  font-size: 16px;
+}
+
+/* Estilos para el formulario */
 form {
   background-color: rgba(0, 0, 0, 0.6);  /* Fondo oscuro semitransparente */
   padding: 30px;
@@ -30,32 +49,26 @@ form {
   width: 400px;
   align-items: flex-start;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-/* Campo de texto, número de teléfono, textarea, y select */
+/* Campos de texto y select */
 input[type="text"], input[type="tel"], textarea, select {
   padding: 10px;
   margin: 10px 0;
   width: 100%;
   border: 2px solid #fff;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.3); /* Fondo ligeramente transparente */
-  color: white;  /* Color de texto blanco */
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
   font-size: 16px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Estilo cuando el input o textarea está enfocado (al interactuar con el campo) */
 input[type="text"]:focus, input[type="tel"]:focus, textarea:focus, select:focus {
-  background-color: gray; /* Fondo blanco cuando el campo está enfocado */
-  color: white; /* Letras negras cuando el campo está enfocado */
-  outline: none; /* Elimina el borde por defecto del navegador */
-}
-
-/* Estilo para el select cuando se hace clic (al abrirse) */
-select:focus {
-  background-color: white; /* Fondo blanco cuando el select está abierto */
-  color: black; /* Letras negras cuando el select está abierto */
+  background-color: white;
+  color: black;
 }
 
 /* Estilo del botón */
@@ -72,11 +85,4 @@ button {
 
 button:hover {
   background-color: #45a049;
-}
-
-/* Media queries para dispositivos pequeños */
-@media (max-width: 767px) {
-  form {
-    width: 90%;  /* Hacer el formulario más pequeño en pantallas pequeñas */
-  }
 }
