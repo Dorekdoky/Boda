@@ -1,0 +1,13 @@
+body {
+  background-image: url('Imagenes/bda.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white; /* Para que el texto sea visible en caso de que la imagen sea oscura */
+  font-family: Arial, sans-serif; /* Estilo de fuente */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}
