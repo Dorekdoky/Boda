@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patricia y Ernesto</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Cargar SweetAlert (asegúrate de incluir esta línea) -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body class="bg-light">
-  <h1>¡Proximamente nuestra boda!</h1>
-  <p>Nos encantaria que fueras parte de este gran momento que a Patricia y Ernesto los unira el amor</p>
-    <form id="submit-to-google-sheet">
+  <h1>¡Próximamente nuestra boda!</h1>
+  <p>Nos encantaría que fueras parte de este gran momento que a Patricia y Ernesto los unirá el amor</p>
+
+  <form id="submit-to-google-sheet">
     <!-- Campo Nombre -->
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
@@ -22,21 +25,21 @@
     <label for="intereses">¿Deseas ser padrino?:</label>
     <select id="intereses" name="intereses" required>
       <option value="" disabled selected>Selecciona una opción...</option>
-              <option value="Salon">Apoyo al Salon</option>
-              <option value="Vestido">Vestido</option>
-              <option value="Traje">Traje</option>
-              <option value="Grupo">Grupo</option>
-              <option value="Botellas">Botellas</option>
-              <option value="Fuegos_artificiales">Fuegos Artificiales</option>
-              <option value="Vehiculo">Vehiculo</option>
-              <option value="Regalo_sorpresa">Regalo Sorpresa</option>
-              <option value="Iglesia">Iglesia</option>
-              <option value="Anillos">Anillos</option>
-              <option value="Arras">Arras</option>
-              <option value="Lazo">Lazo</option>
-              <option value="Velación">Velación</option>
-              <option value="Ramo">Ramo</option>
-              <option value="Fotografiavideo">Fotografia y Video</option>
+      <option value="Salon">Apoyo al Salon</option>
+      <option value="Vestido">Vestido</option>
+      <option value="Traje">Traje</option>
+      <option value="Grupo">Grupo</option>
+      <option value="Botellas">Botellas</option>
+      <option value="Fuegos_artificiales">Fuegos Artificiales</option>
+      <option value="Vehiculo">Vehiculo</option>
+      <option value="Regalo_sorpresa">Regalo Sorpresa</option>
+      <option value="Iglesia">Iglesia</option>
+      <option value="Anillos">Anillos</option>
+      <option value="Arras">Arras</option>
+      <option value="Lazo">Lazo</option>
+      <option value="Velación">Velación</option>
+      <option value="Ramo">Ramo</option>
+      <option value="Fotografiavideo">Fotografía y Video</option>
     </select>
 
     <!-- Cuadro de Mensaje -->
@@ -44,28 +47,25 @@
     <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
 
     <!-- Botón de Enviar -->
-          <button type="Submit" class="btn btn-primary btn-block">
-            Enviar
-          </button>
+    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
   </form>
 
   <script>
-      const scriptURL =                       
-      "https://script.google.com/macros/s/AKfycbzkcCoscIb-do4oKp1ykd50jD2YkRAL0Rw3FC0-I8k5rei6AFs8P9W-828m20K45Nr5/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        var formData = new FormData(form);
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzkcCoscIb-do4oKp1ykd50jD2YkRAL0Rw3FC0-I8k5rei6AFs8P9W-828m20K45Nr5/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      var formData = new FormData(form);
 
-        fetch(scriptURL, { method: "POST", body: formData })
-          .then((response) => {
-            swal("Done", "Submitted Successfully.", "success");
-          })
-          .catch((error) => {
-            swal("Error", "Something went wrong. please try again!", "error");
-          });
-      });
-    </script>
+      fetch(scriptURL, { method: "POST", body: formData })
+        .then((response) => {
+          swal("Done", "Submitted Successfully.", "success");
+        })
+        .catch((error) => {
+          swal("Error", "Something went wrong. Please try again!", "error");
+        });
+    });
+  </script>
 
 </body>
 </html>
