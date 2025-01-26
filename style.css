@@ -1,26 +1,44 @@
 body {
-  background-image: url('Imagenes/bda.jpg');
-  background-size: cover;  /* Hace que la imagen cubra toda el área */
-  background-position: center;  /* Centra la imagen en la pantalla */
-  background-attachment: fixed;  /* Fija la imagen cuando haces scroll */
-  color: white;  /* Para que el texto sea visible en fondos oscuros */
-  font-family: Arial, sans-serif;  /* Establece la fuente */
   margin: 0;
   padding: 0;
-  height: 100vh;  /* Asegura que la altura ocupe todo el viewport */
+  font-family: Arial, sans-serif;
+  color: white;  /* Para que el texto sea visible */
+  height: 100vh;  /* Ocupa toda la altura del viewport */
+  background-image: url('Imagenes/bda.jpg');
+  background-size: cover;  /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center;  /* Centra la imagen */
 }
 
 h1 {
   text-align: center;
-  margin-top: 100px;  /* Da un espacio por encima del título */
+  margin-top: 100px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
+  /* Para pantallas de escritorio grandes */
   body {
-    background-attachment: scroll;  /* Desactiva el fondo fijo en pantallas pequeñas */
+    background-attachment: fixed;  /* Fondo fijo al hacer scroll */
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  /* Para tabletas y pantallas medianas */
+  body {
+    background-attachment: scroll;  /* Fondo se mueve con el scroll */
   }
 
   h1 {
-    margin-top: 50px;  /* Ajusta el margen para que no quede muy arriba en pantallas pequeñas */
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Para móviles */
+  body {
+    background-attachment: scroll;  /* Fondo se mueve con el scroll */
+  }
+
+  h1 {
+    margin-top: 30px;  /* Ajuste del margen superior en pantallas pequeñas */
   }
 }
