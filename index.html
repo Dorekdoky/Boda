@@ -3,15 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patricia y Ernesto</title>
+  <title>Formulario Mejorado</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>¡Pronto nuestra boda!</h1>
-  <h2>Seria un placer que fueras parte de esta hermosa experiencia</h2>
-    <form action="#" method="post">
-    <label for="nombre">Tu nombre:</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+  <h1>Formulario de Contacto</h1>
+  <p>Por favor, llena el siguiente formulario para contactarnos.</p>
+
+  <!-- Formulario -->
+  <form action="#" method="post">
+    <!-- Campo Nombre -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+    <!-- Campo Número de Teléfono -->
+    <label for="telefono">Número de Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
+
+    <!-- Selección Múltiple -->
+    <label for="intereses">Selecciona tus intereses:</label>
+    <select id="intereses" name="intereses[]" multiple>
+      <option value="diseño">Diseño Gráfico</option>
+      <option value="desarrollo">Desarrollo Web</option>
+      <option value="marketing">Marketing Digital</option>
+      <option value="seo">SEO</option>
+      <option value="otros">Otros</option>
+    </select>
+
+    <!-- Cuadro de Mensaje -->
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+    <!-- Botón de Enviar -->
     <button type="submit">Enviar</button>
   </form>
 </body>
