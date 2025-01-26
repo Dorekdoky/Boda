@@ -51,12 +51,6 @@ input[type="text"]:focus, input[type="tel"]:focus, textarea:focus, select:focus 
   outline: none; /* Elimina el borde por defecto del navegador */
 }
 
-/* Estilo específico para el campo select (con fondo gris claro) */
-select {
-  background-color: #d3d3d3; /* Fondo gris claro */
-  transition: background-color 0.3s ease; /* Transición para un cambio suave */
-}
-
 /* Estilo para el select cuando está en foco (al abrirse) */
 select:focus {
   background-color: #808080; /* Fondo gris oscuro cuando el select está abierto */
