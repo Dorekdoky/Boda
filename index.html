@@ -11,19 +11,19 @@
   <p>Por favor, llena el siguiente formulario para contactarnos.</p>
 
   <!-- Formulario -->
-  <form action="#" method="post">
+  <form id="formulario" action="https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_URL/exec" method="post">
     <!-- Campo Nombre -->
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
 
-    <!-- Campo Número de Teléfono -->
+    <!-- Campo Número de Teléfono (Solo Números) -->
     <label for="telefono">Número de Teléfono:</label>
-    <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
+    <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" pattern="\d+" title="Por favor, ingresa solo números" required>
 
     <!-- Selección de única opción -->
     <label for="intereses">Selecciona tu interés:</label>
     <select id="intereses" name="intereses" required>
-      <option value="" disabled selected>Selecciona una opción...</option> <!-- Opción en blanco predeterminada -->
+      <option value="" disabled selected>Selecciona una opción...</option>
       <option value="diseño">Diseño Gráfico</option>
       <option value="desarrollo">Desarrollo Web</option>
       <option value="marketing">Marketing Digital</option>
@@ -38,6 +38,19 @@
     <!-- Botón de Enviar -->
     <button type="submit">Enviar</button>
   </form>
+
+  <!-- Agregamos el script de validación -->
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function(e) {
+      // Validación extra (opcional), para asegurarse de que el teléfono contiene solo números
+      var telefono = document.getElementById('telefono').value;
+      var pattern = /^\d+$/;
+      if (!pattern.test(telefono)) {
+        alert('Por favor, ingresa solo números en el campo de teléfono.');
+        e.preventDefault(); // Previene el envío del formulario si no es válido
+      }
+    });
+  </script>
 
 </body>
 </html>
