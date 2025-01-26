@@ -47,8 +47,8 @@ input[type="text"], input[type="tel"], textarea, select {
 
 /* Estilo cuando el input o textarea está enfocado (al interactuar con el campo) */
 input[type="text"]:focus, input[type="tel"]:focus, textarea:focus, select:focus {
-  background-color: white; /* Fondo blanco cuando el campo está enfocado */
-  color: black; /* Letras negras cuando el campo está enfocado */
+  background-color: gray; /* Fondo blanco cuando el campo está enfocado */
+  color: white; /* Letras negras cuando el campo está enfocado */
   outline: none; /* Elimina el borde por defecto del navegador */
 }
 
