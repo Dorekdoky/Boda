@@ -20,9 +20,10 @@
     <label for="telefono">Número de Teléfono:</label>
     <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
 
-    <!-- Selección Múltiple -->
-    <label for="intereses">Selecciona tus intereses:</label>
-    <select id="intereses" name="intereses[]" multiple>
+    <!-- Selección de única opción -->
+    <label for="intereses">Selecciona tu interés:</label>
+    <select id="intereses" name="intereses" required>
+      <option value="" disabled selected>Selecciona una opción...</option> <!-- Opción en blanco predeterminada -->
       <option value="diseño">Diseño Gráfico</option>
       <option value="desarrollo">Desarrollo Web</option>
       <option value="marketing">Marketing Digital</option>
@@ -37,5 +38,6 @@
     <!-- Botón de Enviar -->
     <button type="submit">Enviar</button>
   </form>
+
 </body>
 </html>
