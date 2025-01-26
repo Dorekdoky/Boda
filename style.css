@@ -4,13 +4,16 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   color: black;
-  background-color: #f8f9fa;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh; /* Asegura que la página ocupe toda la altura de la ventana */
+  background-image: url('Imagenes/bda3.jpg'); /* Asegúrate de colocar la ruta correcta */
+  background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen de fondo cuando se hace scroll */
 }
 
 h1 {
