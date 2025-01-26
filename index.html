@@ -5,13 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patricia y Ernesto</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Cargar SweetAlert (asegúrate de incluir esta línea) -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body class="bg-light">
   <h1>¡Próximamente nuestra boda!</h1>
   <p>Nos encantaría que fueras parte de este gran momento que a Patricia y Ernesto los unirá el amor</p>
+  
+  <!-- Contenedor para los dos cuadros de texto -->
+  <div class="text-container">
+    <!-- Cuadro 1 -->
+    <div class="text-box">
+      <h2>Texto 1</h2>
+      <p>Este es el primer cuadro de texto, donde puedes escribir algún mensaje o información adicional sobre el evento.</p>
+    </div>
+    <!-- Cuadro 2 -->
+    <div class="text-box">
+      <h2>Texto 2</h2>
+      <p>Este es el segundo cuadro de texto, donde puedes colocar más información, detalles de la boda o lo que consideres importante.</p>
+    </div>
+  </div>
 
+  <!-- Formulario -->
   <form id="submit-to-google-sheet">
     <!-- Campo Nombre -->
     <label for="nombre">Nombre:</label>
@@ -66,6 +80,5 @@
         });
     });
   </script>
-
 </body>
 </html>
