@@ -1,6 +1,6 @@
 body {
   background-image: url('Imagenes/bda2.jpg');
-  background-size: cover;  /* Hace que la imagen cubra toda el área */
+  /*background-size: cover;  /* Hace que la imagen cubra toda el área */
   background-position: center;  /* Centra la imagen en la pantalla */
   background-attachment: fixed;  /* Fija la imagen cuando haces scroll */
   color: white;  /* Para que el texto sea visible en fondos oscuros */
