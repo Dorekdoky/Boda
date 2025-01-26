@@ -1,6 +1,0 @@
-body {
-  background-image: url('/Imagenes/bda.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Para que el fondo se quede fijo al hacer scroll */
-}
