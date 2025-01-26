@@ -6,11 +6,17 @@ body {
   color: black;
   background-color: #f8f9fa;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh; /* Asegura que la página ocupe toda la altura de la ventana */
 }
 
 h1 {
   font-size: 32px;
-  margin-top: 20px;
+  margin-top: 40px; /* Espacio desde la parte superior de la ventana */
+  margin-bottom: 20px; /* Espacio debajo del título */
 }
 
 /* Estilo para los cuadros de texto (uno al lado del otro) */
@@ -19,6 +25,8 @@ h1 {
   justify-content: center;
   gap: 20px; /* Espacio entre los cuadros */
   margin: 20px 0;
+  width: 100%;
+  max-width: 1200px; /* Límite máximo de ancho para los cuadros */
 }
 
 .text-box {
@@ -86,3 +94,4 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
